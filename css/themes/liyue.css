@@ -1,0 +1,16 @@
+/* Liyue — lantern gold on contract red */
+body.stops{
+  --st-page:#4a2018;--st-display:'Newsreader','Playfair Display',Georgia,serif;--st-body:'Alegreya',Georgia,serif;
+  --st-hero-overlay:linear-gradient(rgba(60,28,22,.62),rgba(60,28,22,.5));
+  --st-eyebrow-hero:#d9a066;--st-h1:#fbe9cf;--st-btn-bg:#d9994b;--st-btn-fg:#3a1d14;
+  --st-stats-bg:#7b3329;--st-stats-fg:#f5dfc4;
+  --st-intro-bg:#f8e6c0;--st-intro-eyebrow:#c0654b;--st-intro-h2:#7b3329;--st-intro-p:#6a3a30;
+  --st-stops-bg:#41231f;--st-frame:#c9a05a;--st-stop-overlay:linear-gradient(rgba(84,36,26,.42),rgba(84,36,26,.42));
+  --st-num:#e0b060;--st-link:#e0b060;--st-h1-weight:500;--st-h2-weight:400;--st-h3-weight:400;--st-tag-weight:400;
+}
+.st-eyebrow{font-size:1.5rem;margin-bottom:.2rem}
+.st-hero h1{font-size:6.6rem;letter-spacing:.03em}
+.st-tag{font-style:normal;font-weight:400}
+.st-intro .eyebrow{font-size:1.1rem}
+
+.st-hero{background:var(--st-hero-overlay),url(../../assets/img/nations/liyue-hero.jpg) center/cover no-repeat}

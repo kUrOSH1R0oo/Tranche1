@@ -1,0 +1,14 @@
+/* Inazuma — moonlit violet and sakura pink */
+body.stops{
+  --st-page:#202050;--st-display:'Playfair Display',Georgia,serif;--st-body:'Newsreader',Georgia,serif;
+  --st-hero-overlay:linear-gradient(90deg,rgba(32,26,84,.82) 0%,rgba(48,32,110,.5) 45%,rgba(48,32,110,.15) 100%);
+  --st-eyebrow-hero:#f7b6dd;--st-h1:#fbeaf6;--st-btn-bg:#f7b6dd;--st-btn-fg:#2a1d5c;
+  --st-stats-bg:#3a2a6b;--st-stats-fg:#f1e6fa;--st-stats-edge:#c78ec7;
+  --st-intro-bg:#ead9ec;--st-intro-eyebrow:#a05aa8;--st-intro-h2:#38306b;--st-intro-p:#4a3f78;--st-eyebrow-font:'Playfair Display',serif;
+  --st-stops-bg:#202050;--st-frame:#a97dbb;--st-stop-overlay:linear-gradient(rgba(48,32,110,.5),rgba(48,32,110,.5));
+  --st-num:#f7b6dd;--st-link:#f7b6dd;--st-h1-weight:700;--st-h2-weight:700;--st-h3-weight:600;
+}
+.st-hero{background:var(--st-hero-overlay),url(../../assets/img/inazuma/hero.jpg) center/cover no-repeat}
+.st-hero h1{font-size:6.6rem;letter-spacing:.04em}
+.st-eyebrow{font-size:1.5rem;margin-bottom:.2rem}
+.st-intro .eyebrow{font-size:1.1rem}

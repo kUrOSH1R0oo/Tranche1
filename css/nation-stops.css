@@ -1,0 +1,41 @@
+/* Shared by Mondstadt, Liyue, Sumeru — each theme sets the --st-* variables */
+body.stops{background:var(--st-page);font-family:var(--st-body)}
+
+/* hero */
+.st-hero{position:relative;min-height:calc(100vh - var(--nav-h));display:flex;align-items:center;padding:4rem 6.5rem;overflow:hidden;}
+.st-hero .copy{position:relative;max-width:46rem}
+.st-eyebrow{font-family:var(--st-body);font-size:1.4rem;color:var(--st-eyebrow-hero)}
+.st-hero h1{font-family:var(--st-display);font-weight:var(--st-h1-weight,400);font-size:6.6rem;line-height:1.05;letter-spacing:var(--st-h1-track,.02em);text-transform:uppercase;color:var(--st-h1)}
+.st-tag{font-family:var(--st-display);font-style:italic;font-weight:var(--st-tag-weight,700);font-size:1.75rem;line-height:1.3;color:#fff;margin:.4rem 0 1rem}
+.st-desc{font-family:var(--st-body);font-size:.98rem;line-height:1.55;color:rgba(255,255,255,.85);max-width:27rem;margin-bottom:1.6rem}
+.st-btn{display:inline-block;padding:.75rem 1.5rem;font-family:var(--st-body);font-size:.95rem;background:var(--st-btn-bg);color:var(--st-btn-fg);border:1px solid var(--st-btn-border,transparent)}
+.st-btn:hover{filter:brightness(1.08)}
+
+/* quick facts bar */
+.st-stats{display:flex;gap:3.2rem;padding:1.6rem 2.5rem;font-family:var(--st-body);font-size:1.1rem;background:var(--st-stats-bg);color:var(--st-stats-fg);border-top:1px solid var(--st-stats-edge,transparent)}
+
+/* intro */
+.st-intro{display:grid;grid-template-columns:1.4fr 1fr;gap:4rem;align-items:center;padding:5.6rem 8.8rem;background:var(--st-intro-bg)}
+.st-intro .eyebrow{font-family:var(--st-eyebrow-font,var(--st-display));font-weight:600;font-size:1.25rem;text-transform:uppercase;color:var(--st-intro-eyebrow);margin-bottom:.5rem}
+.st-intro h2{font-family:var(--st-display);font-weight:var(--st-h2-weight,700);font-size:2.9rem;line-height:1.1;color:var(--st-intro-h2)}
+@media (min-width:801px){.st-intro h2{white-space:nowrap}}
+.st-intro p{font-family:var(--st-body);font-size:1.05rem;line-height:1.7;color:var(--st-intro-p);max-width:30rem}
+
+/* stops */
+.st-stops{padding:4.6rem 2.2rem 5rem;display:grid;gap:2.4rem;background:var(--st-stops-bg)}
+.st-stops .lead{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;padding:0 6rem;margin-bottom:1.5rem;color:var(--st-lead-fg,#fff);align-items:center}
+.st-stops .lead[hidden]{display:none}
+.stop{position:relative;min-height:36rem;display:flex;align-items:center;padding:0 6rem;border:1px solid var(--st-frame);overflow:hidden;background:var(--st-stop-overlay),var(--img) center/cover no-repeat}
+.stop.right{justify-content:flex-end}
+.stop .copy{max-width:25rem}
+.stop .n{display:block;font-family:var(--st-display);font-size:1.5rem;color:var(--st-num);margin-bottom:.3rem}
+.stop h3{font-family:var(--st-display);font-weight:var(--st-h3-weight,400);font-size:2.9rem;line-height:1.1;color:#fff;margin-bottom:.9rem}
+.stop p{font-family:var(--st-body);font-size:.98rem;line-height:1.5;color:rgba(255,255,255,.88);margin-bottom:1.5rem}
+.stop a{font-family:var(--st-body);font-size:.9rem;color:var(--st-link);border-bottom:1px solid var(--st-link);padding-bottom:.15rem}
+
+@media (max-width:800px){
+  .st-hero{padding:2.5rem 1.4rem}.st-hero h1{font-size:3.2rem}.st-tag{font-size:1.3rem}
+  .st-stats{flex-direction:column;gap:.6rem;padding:1.2rem 1.4rem;font-size:.95rem}
+  .st-intro{grid-template-columns:1fr;gap:1.4rem;padding:2.6rem 1.4rem}.st-intro h2{font-size:2rem}
+  .st-stops{padding:2rem .8rem}.stop{min-height:26rem;padding:0 1.4rem}.stop h3{font-size:1.9rem}
+}

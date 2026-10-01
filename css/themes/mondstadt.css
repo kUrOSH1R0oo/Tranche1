@@ -1,0 +1,16 @@
+/* Mondstadt — windswept blues on warm apricot */
+body.stops{
+  --st-page:#f0c08e;--st-display:'DM Serif Display',Georgia,serif;--st-body:'Alegreya',Georgia,serif;
+  --st-hero-overlay:linear-gradient(rgba(38,70,138,.58),rgba(38,70,138,.5));
+  --st-eyebrow-hero:#f0c08e;--st-h1:#fbeedb;--st-btn-bg:#b04a3f;--st-btn-fg:#fff;
+  --st-stats-bg:#2e4e84;--st-stats-fg:#e9eef8;--st-stats-edge:#d9a94a;
+  --st-intro-bg:#ece4d6;--st-intro-eyebrow:#b04a48;--st-intro-h2:#2e4e84;--st-intro-p:#4f6499;
+  --st-stops-bg:#f0c08e;--st-frame:#d24b3a;--st-stop-overlay:linear-gradient(rgba(38,72,140,.5),rgba(38,72,140,.5));
+  --st-num:#f0c08e;--st-link:#f0c08e;--st-h3-weight:400;--st-eyebrow-font:'DM Serif Display',serif;
+}
+.st-hero{background-position:center 40%}
+.st-eyebrow{font-size:1.5rem;margin-bottom:.2rem}
+.st-hero h1{font-size:6.2rem;letter-spacing:.04em}
+.st-intro .eyebrow{font-size:1.1rem}
+
+.st-hero{background:var(--st-hero-overlay),url(../../assets/img/nations/mondstadt-hero.jpg) center/cover no-repeat}

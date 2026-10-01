@@ -1,0 +1,19 @@
+/* Sumeru — canopy greens */
+body.stops{
+  --st-page:#153b35;--st-display:'Alegreya',Georgia,serif;--st-body:'Alegreya',Georgia,serif;
+  --st-hero-overlay:linear-gradient(rgba(14,50,40,.4),rgba(14,50,40,.45));
+  --st-eyebrow-hero:#e9f1de;--st-h1:#f3f1d3;--st-btn-bg:transparent;--st-btn-fg:#f0f4e4;--st-btn-border:#dfe9d3;
+  --st-stats-bg:#2a6650;--st-stats-fg:#e4efe1;
+  --st-intro-bg:#153b35;--st-intro-eyebrow:#8fb6a1;--st-intro-h2:#eef5ea;--st-intro-p:#b9d1c5;
+  --st-stops-bg:#153b35;--st-frame:#2f6f55;--st-stop-overlay:linear-gradient(rgba(16,64,50,.35),rgba(16,64,50,.35));
+  --st-num:#dfead2;--st-link:#eef5ea;--st-h1-weight:700;--st-h2-weight:400;--st-h3-weight:500;--st-tag-weight:400;--st-eyebrow-font:'Alegreya',serif;
+}
+.st-hero .copy{padding-left:2.2rem;border-left:1px solid rgba(240,244,228,.55);margin-left:-.6rem}
+.st-eyebrow{font-size:1.5rem;margin-bottom:.2rem}
+.st-hero h1{font-size:6rem;letter-spacing:.08em}
+.st-tag{font-weight:400;font-size:1.8rem}
+.st-intro{padding:5rem 8.8rem 4rem;gap:4rem}
+.st-intro .eyebrow{font-weight:500;letter-spacing:.06em;font-size:.9rem;margin-bottom:.8rem}
+.st-intro h2{font-size:3rem}
+
+.st-hero{background:var(--st-hero-overlay),url(../../assets/img/nations/sumeru-hero.jpg) center/cover no-repeat}

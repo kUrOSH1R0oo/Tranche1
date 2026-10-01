@@ -1,0 +1,129 @@
+/* Home page + shared sections reused on the Company Profile page */
+.star-title{font-weight:800}
+
+/* hero */
+.hero{position:relative;min-height:calc(100vh - var(--nav-h));display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;overflow:hidden;
+  background:linear-gradient(rgba(54,54,130,.5),rgba(60,60,140,.35)),url(../assets/img/home/hero-bg.webp) center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:42%;z-index:2;pointer-events:none;background:linear-gradient(transparent,rgba(214,200,225,.32) 45%,rgba(240,225,200,.55))}  /* mist layer, sits in front of the gate */
+.hero h1{position:relative;z-index:1;font-weight:400;font-size:10.4vw;line-height:1;letter-spacing:.005em;text-transform:uppercase;color:#f3f3f6;text-shadow:0 0 1px #fff,0 3px 6px rgba(20,20,70,.35);margin-top:1rem;white-space:nowrap}
+.tagline{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1.5rem;font-style:italic;font-size:2.2rem;color:#fff;text-shadow:0 2px 6px rgba(20,20,70,.5)}
+.tagline .gold{color:#fdf1b8}
+.tagline img{height:23rem;margin:0 3.6rem -5.5rem;align-self:flex-end;filter:drop-shadow(0 0 1.5rem rgba(255,255,255,.7))}
+.tagline span{padding-bottom:7rem}
+.hero .explore-pill{z-index:3;margin:3.6rem auto 0;background:rgba(75,91,131,.92)}
+.hero .about-links{z-index:3;width:100%;max-width:62rem;margin:2.2rem auto 0;color:#4A4C70}
+.hero .about-links a{border-top-color:#4A4C70;margin:0 2.4rem;text-align: left}
+.hero .about-links a:hover{color:#fff;border-top-color:#fff}
+
+/* about */
+.about{position:relative;padding:3rem 5rem 4rem;background:linear-gradient(#e6d9c3 0,#f6ecda 14%,#e6e2dc 60%,#dcdcdc 100%);overflow:hidden;color:#4e5f86}
+.about-bg{position:absolute;inset:0;background:url(../assets/img/home/clouds.webp) center top/100% auto no-repeat,url(../assets/img/home/map.webp) 105% 6rem/52% auto no-repeat;opacity:.9;pointer-events:none}
+.explore-pill{position:relative;display:flex;width:max-content;margin:2.2rem auto 0;align-items:center;gap:.9rem;padding:.9rem 2rem;border:2px solid #e8eaf5;border-radius:1.8rem;background:#4b5b83;color:#fff;font-size:1.25rem;box-shadow:0 .3rem .8rem rgba(50,60,100,.35)}
+.explore-pill img{width:1.5rem}
+.about-links{position:relative;display:flex;justify-content:space-between;margin:4rem 9rem 5rem;font-size:1.15rem;color:#4b5b83}
+.about-links a{flex:1;text-align:center;padding-top:.9rem;border-top:1px solid #6a7a9f;margin:0 3rem}
+.about-copy{position:relative;max-width:39rem;margin-left:1.5rem;padding-left:4rem;border-left:1px solid #4a6fc0}
+.about-copy h2{font-size:2.5rem;text-transform:uppercase;color:#4c5f88;margin-bottom:1.6rem;margin-left:-3.2rem}
+.about-copy h2 img{width:2.7rem;height:2.7rem}
+.about-copy p{font-size:1.2rem;line-height:1.5;margin-bottom:2.2rem;color:#5a6a90}
+
+/* director */
+.director{position:relative;min-height:47rem;padding:8rem 5rem 6rem;background:linear-gradient(#dcdcdc,#d7dbe4 60%,#d2d8e6);overflow:hidden;color:#4e5f86}
+.director .statue{position:absolute;left:-5rem;bottom:-4;width:24rem;opacity:.5}
+.director .clock{position:absolute;left:20rem;bottom:-6rem;width:34rem;opacity:.28}
+.director .portrait{position:absolute;left:9rem;top:8rem;width:27rem;-webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 46%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 62% 58% at 50% 46%,#000 55%,transparent 100%)}
+.director-copy{position:relative;margin-left:auto;max-width:38rem;text-align:right;padding-top:1rem}
+.director-copy .kicker{font-weight:700;font-size:1.5rem;color:#4b5b83;margin-bottom:.2rem}
+.director-copy h2{justify-content:flex-end;font-size:2.7rem;text-transform:uppercase;color:#4c5f88;margin-bottom:1.6rem}
+.director-copy h2 img{width:2.4rem;height:2.4rem}
+.director-copy p{font-size:1.2rem;line-height:1.5;margin-bottom:1.5rem;color:#5b6a91}
+
+/* purpose */
+.purpose{position:relative;padding:4rem 5rem 6rem;background:linear-gradient(rgba(150,165,205,.55),rgba(210,205,200,.5)),url(../assets/img/home/hero-bg.webp) center/cover;color:#fff}
+.purpose-kicker{font-size:1.15rem;font-weight:700;text-align:center}
+.purpose-title{justify-content:center;font-size:2.1rem;text-transform:uppercase;letter-spacing:.01em;margin:0 0 2.5rem 0}
+.purpose-title img{width:2.4rem;height:2.4rem;opacity:.6}
+.purpose-grid{display:grid;grid-template-columns:repeat(2,26rem);gap:2rem 2.4rem;justify-content:center;align-items:start}
+.glass{background:rgba(235,240,250,.72);backdrop-filter:blur(6px);padding:1.4rem 1.6rem 1.8rem;color:#2f4c85;font-size:1.05rem;line-height:1.35}
+.glass h3{font-size:1.15rem;font-weight:700;text-transform:uppercase;color:#2a4a86;margin:.3rem 0 .4rem}
+.glass p{font-size:1.15rem}
+.compass-badge{display:block;width:3.2rem;height:3.2rem;border-radius:50%;background:#1e4f92 url(../assets/icons/star-white.png) center/70% no-repeat}
+.values{grid-column:1/-1;width:31rem;margin:0 auto}
+.values ul{display:grid;gap:.45rem}
+.values li{font-size:1rem;color:#2b3f73;padding-left:1.7rem;background:url(../assets/icons/star-blue.png) 0 .25rem/1rem no-repeat}
+.values li b{color:#2a4a86;margin-right:.35rem}
+
+/* nations grid */
+.nations{padding:3rem 5rem 5rem;background:linear-gradient(#cfd4de,#c4ccd6 40%,#c3ccd6);color:#4e5f86}
+.nations .star-title{justify-content:center;font-size:1.9rem;text-transform:uppercase;color:#4c5f88}
+.nations .sub{text-align:center;margin:.3rem 0 3rem;font-size:1.35rem;color:#586a94}
+.nation-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:2.2rem 2rem;max-width:68rem;margin:0 auto}
+.nation{grid-column:span 4;position:relative;display:block;height:9rem;border:.25rem solid var(--edge);border-radius:.35rem;overflow:hidden;background:var(--c);box-shadow:0 .3rem .7rem rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.4);transition:transform .2s}
+.nation:hover{transform:translateY(-.25rem)}
+.nation:last-child{grid-column:5/9}
+.nation .photo{position:absolute;inset:0 0 auto 0;width:100%;height:60%;object-fit:cover}
+.nation .label{position:absolute;inset:auto 0 0 0;height:46%;background:var(--c);color:#fff;padding:.3rem .6rem .3rem 5.3rem;display:flex;flex-direction:column;justify-content:center;font-size:.72rem;line-height:1.25}
+.nation h3{font-size:1rem;font-weight:600}
+.nation .go{position:absolute;right:.7rem;bottom:.35rem;display:flex;align-items:center;gap:.3rem;padding:.1rem .7rem;border:1px solid #fff;border-radius:1rem;font-size:.7rem}
+.nation .go img{width:.9rem}
+.nation .crest{position:absolute;left:.8rem;top:-1.5rem;width:3.4rem;height:3.4rem;padding:.7rem;border-radius:50%;background:var(--c);border:.15rem solid rgba(255,255,255,.7);object-fit:contain}
+.mondstadt{--c:#3fb4bb;--edge:#7fd3d8}
+.liyue{--c:#ea6a2a;--edge:#f39a63}
+.inazuma{--c:#b93bc4;--edge:#dc8be2}
+.sumeru{--c:#2fa04a;--edge:#6cc57f}
+.fontaine{--c:#2c74b8;--edge:#6da6dc}
+.natlan{--c:#c92f1a;--edge:#e5715f}
+.snezhnaya{--c:#31c4e4;--edge:#8fe4f4}
+
+/* why */
+.why{padding:3.5rem 5rem 4rem;background:linear-gradient(#c3ccd6,#d3d9e3);color:#233a7a;text-align:left}
+.why-kicker{font-size:1.15rem;font-weight:500;margin-left:3rem;color:#3c4f88}
+.why h2{font-size:1.7rem;text-transform:uppercase;color:#243a7e}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.2rem;text-align:center}
+.why-grid img{width:3.4rem;height:auto;margin:0 auto .7rem}
+.why-grid h3{font-size:1.1rem;font-weight:600;color:#26397a}
+.why-grid p{font-size:.9rem;color:#33488a;max-width:11rem;margin:.3rem auto 0}
+
+/* faq */
+.faq{padding:3.5rem 5rem 5rem;background:#202050;border-top:.25rem solid #e8e8f6}
+.faq h2{font-size:1.75rem;text-transform:none;font-weight:600}
+.faq h2 img{width:2rem;height:2rem}
+.faq-list{margin:1rem 0 0 2rem;max-width:33rem;display:grid;gap:.35rem}
+.faq-list details{background:#8c8cb0;color:#fff;border-radius:.25rem}
+.faq-list summary{list-style:none;cursor:pointer;padding:.15rem .5rem .15rem 2rem;font-size:1.02rem;background:url(../assets/icons/faq-bullet.png) .55rem center/.8rem no-repeat}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list details p{padding:.2rem 1rem .8rem 2rem;font-size:.95rem;color:#f0effa}
+
+@media (max-width:800px){
+  .hero h1{font-size:3.2rem;white-space:normal;margin-top:1rem}
+  .tagline{flex-direction:column;font-size:1.4rem}.tagline img{height:9rem;margin:0}.tagline span{padding:0}
+  .hero .explore-pill{font-size:1rem;padding:.7rem 1.4rem}.hero .about-links{margin-top:1.5rem}.hero .about-links a{margin:0 .3rem}
+  .about,.director,.purpose,.nations,.why,.faq{padding-left:1.4rem;padding-right:1.4rem}
+  .about-bg{background-size:100% auto,90% auto;background-position:center top,center 22rem}
+  .about-links{margin:2rem 0}.about-links a{margin:0 .4rem;font-size:.9rem}
+  .about-copy{margin:0;padding-left:1rem}.about-copy h2{margin-left:0;font-size:1.5rem}
+  .director{min-height:0}.director .portrait{position:relative;left:auto;top:auto;width:60%;margin:0 auto}
+  .director .statue,.director .clock{display:none}
+  .director-copy{text-align:left}.director-copy h2{justify-content:flex-start}
+  .purpose-grid{grid-template-columns:1fr;padding-left:0}.values{width:auto}
+  .nation-grid{grid-template-columns:1fr;padding-left:0;max-width:22rem}
+  .nation,.nation:nth-child(n){grid-column:auto;height:10rem}
+  .why-grid{grid-template-columns:1fr 1fr}
+}
+
+/* Nav underline follows the section in view — pure CSS scroll-driven animation.
+   Browsers without support (e.g. current Firefox) fall back to the click-based :target rules in styles.css. */
+body.home{timeline-scope:--t-home,--t-profile,--t-nations,--t-faq,--t-contact}
+.zone{view-timeline-axis:block;view-timeline-inset:45% 54%}   /* watch a thin line 45% down the screen */
+.z-home{view-timeline-name:--t-home}
+.z-profile{view-timeline-name:--t-profile}
+.z-nations{view-timeline-name:--t-nations}
+.z-contact{view-timeline:--t-contact block;view-timeline-inset:45% 54%}
+@keyframes nav-spy{0%{opacity:0}1%{opacity:1}99%{opacity:1}100%{opacity:0}}
+@supports (animation-timeline:view()){
+  body.home .nav>a::after,body.home .nav .has-menu>a::after{animation:nav-spy linear both}
+  body.home .nav>a[href="#top"]::after{animation-timeline:--t-home}
+  body.home .nav>a[href="#about"]::after{animation-timeline:--t-profile}
+  body.home .nav .has-menu>a[href="#nations"]::after{animation-timeline:--t-nations}
+  body.home .nav>a[href="#contact"]::after{animation-timeline:--t-contact}
+}

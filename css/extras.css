@@ -1,0 +1,147 @@
+/* Seven Winds Travel & Tours — shared additions (loaded on every page after styles.css) */
+
+/* ---------- accessibility ---------- */
+.skip-link{position:absolute;left:1rem;top:-6rem;z-index:100;padding:.6rem 1.1rem;background:var(--gold);color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:.9rem;transition:top .2s}
+.skip-link:focus{top:.6rem}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+
+/* ---------- brand lockup: SEVEN WINDS over Travel & Tours ---------- */
+.brand{line-height:1.05}
+.brand .brand-text{display:flex;flex-direction:column}
+.brand .brand-name{font-size:1.65rem;letter-spacing:.06em}
+.brand .brand-sub{font-family:'Plus Jakarta Sans',sans-serif;font-size:.62rem;letter-spacing:.38em;color:var(--pink);margin-top:.15rem}
+.brand .brand-tag{font-family:'Plus Jakarta Sans',sans-serif;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:#cfcdf0;opacity:.8;margin-top:.2rem}
+.site-header .brand .brand-tag{display:none}
+.foot-brand .brand-tag{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:.5rem;letter-spacing:.22em;color:#a9a7cf;margin-top:.2rem}
+.hero-eyebrow{position:relative;z-index:1;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem;letter-spacing:.45em;padding-left:.45em;text-transform:uppercase;color:#fdf1b8;text-shadow:0 1px 4px rgba(20,20,70,.6)}
+.foot-brand .brand-sub{font-family:'Plus Jakarta Sans',sans-serif;font-size:.55rem;letter-spacing:.3em;color:var(--pink);display:block}
+
+/* ---------- contact / call-to-action band (id="contact", on every page) ---------- */
+.cta-band{position:relative;padding:5rem 6rem 5.5rem;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;color:#fff;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 0,rgba(247,182,221,.22),transparent 60%),linear-gradient(#2c2c78,#202050);border-top:.25rem solid #e8e8f6}
+.cta-band .cta-kicker{font-size:.85rem;letter-spacing:.28em;text-transform:uppercase;color:var(--pink);margin-bottom:.8rem}
+.cta-band h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:2.7rem;line-height:1.15;margin-bottom:1rem}
+.cta-band .cta-lead{max-width:38rem;margin:0 auto 2rem;font-size:1.05rem;line-height:1.6;color:#dedcf3}
+.cta-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:3rem}
+.btn-gold,.btn-ghost{display:inline-block;padding:.85rem 1.8rem;border-radius:2rem;font-weight:600;font-size:.95rem;transition:transform .2s,filter .2s,background .2s}
+.btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 .3rem .9rem rgba(0,0,0,.3)}
+.btn-gold:hover{filter:brightness(1.08);transform:translateY(-.1rem)}
+.btn-ghost{border:1px solid #cfcdf0;color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.cta-steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:56rem;margin:0 auto 2rem;text-align:left;counter-reset:step}
+.cta-steps li{counter-increment:step;position:relative;padding:1.2rem 1.3rem 1.3rem 4rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:.4rem;font-size:.9rem;line-height:1.5;color:#dedcf3}
+.cta-steps li::before{content:counter(step);position:absolute;left:1.1rem;top:1.1rem;width:2.1rem;height:2.1rem;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--navy);font-weight:700}
+.cta-steps b{display:block;color:#fff;font-size:1rem;margin-bottom:.15rem}
+.cta-note{font-size:.8rem;color:#a9a7cf;max-width:36rem;margin:0 auto}
+.cta-note a{color:var(--pink);border-bottom:1px solid currentColor}
+
+/* ---------- footer additions ---------- */
+.site-footer .foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:1.1rem}
+.site-footer .btn-outline{margin-top:.5rem}
+.site-footer .foot-links a,.site-footer li a{border-bottom:1px solid transparent}
+.site-footer .foot-links a:hover,.site-footer li a:hover{border-bottom-color:currentColor}
+.site-footer .foot-mail{display:inline-block;color:var(--pink);border-bottom:1px solid currentColor;margin-bottom:.4rem}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:2.2rem;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.28);font-family:'Playfair Display',serif;font-size:.6rem;color:#a9a7cf}
+.foot-bottom .foot-note{margin:0;padding:0;border:0}
+.foot-bottom a{font-family:'Plus Jakarta Sans',sans-serif;font-size:.7rem;color:#dedcf3}
+
+/* ---------- nation pages: "Good to know" + included / not included ---------- */
+.st-info{padding:5rem 8.8rem 5.5rem;background:var(--st-stats-bg);color:var(--st-stats-fg);font-family:var(--st-body)}
+.st-info h2{font-family:var(--st-display);font-weight:var(--st-h2-weight,700);font-size:2.6rem;line-height:1.1;margin-bottom:.4rem}
+.st-info .st-sub{font-size:1.1rem;opacity:.85;margin-bottom:2.4rem}
+.st-tips{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-bottom:3.2rem}
+.st-tips li{padding:1.4rem 1.2rem;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.07);border-radius:.3rem}
+.st-tips img{height:2.8rem;width:auto;margin-bottom:.8rem}
+.st-tips h3{font-family:var(--st-display);font-weight:var(--st-h3-weight,400);font-size:1.25rem;margin-bottom:.3rem}
+.st-tips p{font-size:1rem;line-height:1.45;opacity:.9}
+.st-incl{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.st-incl h3{font-family:var(--st-display);font-weight:var(--st-h3-weight,400);font-size:1.5rem;margin-bottom:.8rem;padding-bottom:.5rem;border-bottom:1px solid rgba(255,255,255,.3)}
+.st-incl li{position:relative;padding:.25rem 0 .25rem 1.6rem;font-size:1.05rem;line-height:1.45}
+.st-incl li::before{content:"✓";position:absolute;left:0;top:.25rem;color:var(--st-num,#f0c08e);font-weight:700}
+.st-incl .no li::before{content:"–"}
+.st-fine{margin-top:2.2rem;font-size:.95rem;opacity:.75;font-style:italic}
+
+/* ---------- nation pages: previous / next nation ---------- */
+.st-more{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1.5rem;padding:1.8rem 5rem;background:#202050;border-top:1px solid rgba(255,255,255,.3);font-family:'Plus Jakarta Sans',sans-serif;color:#eeecfb}
+.st-more a{display:flex;flex-direction:column;gap:.15rem;padding:.7rem 1.1rem;border:1px solid rgba(255,255,255,.25);border-radius:.3rem;transition:background .2s}
+.st-more a:hover{background:rgba(255,255,255,.1)}
+.st-more small{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink)}
+.st-more strong{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600}
+.st-more .next{text-align:right;align-items:flex-end}
+.st-more .all{text-align:center;align-items:center;border-color:transparent;font-size:.85rem;text-decoration:underline;text-underline-offset:.3rem}
+
+/* ---------- company profile page ---------- */
+.profile-hero{position:relative;padding:5.5rem 5rem 4rem;overflow:hidden;color:#4e5f86;background:linear-gradient(#e6d9c3 0,#f6ecda 30%,#e6e2dc 100%)}
+.profile-hero::before{content:"";position:absolute;inset:0;background:url(../assets/img/home/clouds.webp) center top/100% auto no-repeat,url(../assets/img/home/map.webp) 105% 3rem/46% auto no-repeat;opacity:.85;pointer-events:none}
+.profile-hero .about-copy{margin-left:1.5rem}
+.profile-hero .about-copy h1,.profile-hero .about-copy h2{font-size:3rem;text-transform:uppercase;color:#4c5f88;margin-bottom:1.6rem;margin-left:-3.2rem;line-height:1.1}
+.profile-hero .about-copy h1 img,.profile-hero .about-copy h2 img{width:2.7rem;height:2.7rem}
+.profile-stats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);max-width:62rem;margin:3.2rem 0 0 1.5rem;background:rgba(255,255,255,.55);border:1px solid rgba(74,111,192,.35);backdrop-filter:blur(4px)}
+.profile-stats li{padding:1.3rem 1rem;text-align:center;border-left:1px solid rgba(74,111,192,.25)}
+.profile-stats li:first-child{border-left:0}
+.profile-stats b{display:block;font-size:2rem;color:#2a4a86;line-height:1.1}
+.profile-stats span{font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;color:#586a94}
+.profile-owner{position:relative;overflow:hidden;padding:5rem 5rem 5.5rem;color:#4e5f86;background:linear-gradient(#dcdcdc,#d2d8e6)}
+.owner-grid{display:grid;grid-template-columns:22rem 1fr;gap:4rem;align-items:center;max-width:70rem;margin:0 auto}
+.owner-grid .portrait{width:100%;-webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 46%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 62% 58% at 50% 46%,#000 55%,transparent 100%)}
+.owner-grid .kicker{font-weight:700;font-size:1.3rem;color:#4b5b83}
+.owner-grid h2{font-size:2.5rem;text-transform:uppercase;color:#4c5f88;margin:.2rem 0 1.2rem}
+.owner-grid h2 img{width:2.4rem;height:2.4rem}
+.owner-grid p{font-size:1.15rem;line-height:1.55;margin-bottom:1.2rem;color:#5b6a91}
+.owner-grid blockquote{margin:1.6rem 0 0;padding:.4rem 0 .4rem 1.4rem;border-left:3px solid #4a6fc0;font-style:italic;font-size:1.25rem;line-height:1.5;color:#3f5188}
+.owner-grid blockquote cite{display:block;margin-top:.5rem;font-size:.95rem;font-style:normal;color:#586a94}
+.profile-faq{padding:4.5rem 5rem 5.5rem}
+.profile-faq .faq-list{max-width:52rem;margin-left:2rem}
+.profile-faq .faq-intro{margin:.8rem 0 0 2rem;max-width:40rem;color:#dedcf3;font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;line-height:1.6}
+.profile-faq .faq-intro a{color:var(--pink);border-bottom:1px solid currentColor}
+.faq-list details[open]{background:#9a9ac0}
+.faq-list summary:hover{background-color:rgba(255,255,255,.08)}
+.faq-list details p+p{padding-top:0}
+.faq-list ul{list-style:disc;margin:0 1rem .8rem 3.2rem;font-size:.95rem;color:#f0effa}
+
+/* ---------- home additions ---------- */
+.about-more{position:relative;display:inline-block;margin:0 0 0 4rem;padding:.7rem 1.6rem;border:1px solid #4b5b83;border-radius:2rem;color:#4b5b83;font-size:1.05rem;font-weight:600;transition:background .2s,color .2s}
+.about-more:hover{background:#4b5b83;color:#fff}
+.about-copy .about-more,.about-copy .about-more,.director-copy .about-more{margin:.4rem 0 0}
+.hero h1 small{display:block;margin-top:.4rem;font-size:3.1vw;letter-spacing:.42em;padding-left:.42em;color:#fdf1b8;font-weight:400}
+
+/* ---------- mobile ---------- */
+@media (max-width:800px){
+  body.stops .st-hero h1{font-size:clamp(2.2rem,11.5vw,3.4rem);letter-spacing:.02em;overflow-wrap:anywhere}
+  :root{--nav-h:6.3rem}
+  .site-header{flex-direction:column;justify-content:center;gap:.2rem;padding:.35rem .6rem;height:var(--nav-h)}
+  .brand .brand-tag{display:none}
+  .hero-eyebrow{font-size:.7rem;letter-spacing:.3em}
+  .brand .brand-name{font-size:1.05rem}.brand .brand-sub{font-size:.5rem}
+  .brand img{height:2.3rem;margin-top:0}
+  .nav{width:100%;justify-content:space-between;gap:.3rem;font-size:.74rem}
+  .nav .has-menu{padding:.9rem 0;margin:-.9rem 0}
+  .cta-band{padding:3.2rem 1.4rem 3.5rem}.cta-band h2{font-size:1.8rem}
+  .cta-steps{grid-template-columns:1fr}
+  .st-info{padding:3rem 1.4rem}.st-info h2{font-size:1.9rem}
+  .st-tips{grid-template-columns:1fr 1fr;gap:.8rem}.st-incl{grid-template-columns:1fr}
+  .st-more{grid-template-columns:1fr;padding:1.4rem}.st-more .next{text-align:left;align-items:flex-start}
+  .foot-bottom{flex-direction:column;gap:.6rem;align-items:flex-start}
+  .profile-hero{padding:2.5rem 1.4rem}.profile-hero .about-copy h1,.profile-hero .about-copy h2{font-size:1.8rem;margin-left:0}
+  .profile-stats{grid-template-columns:1fr 1fr;margin-left:0}.profile-stats li:nth-child(3){border-left:0}.profile-stats li:nth-child(n+3){border-top:1px solid rgba(74,111,192,.25)}
+  .profile-owner{padding:2.5rem 1.4rem}.owner-grid{grid-template-columns:1fr;gap:1.5rem}.owner-grid .portrait{width:65%;margin:0 auto}
+  .profile-faq{padding:2.5rem 1.4rem 3.5rem}.profile-faq .faq-list,.profile-faq .faq-intro{margin-left:0}
+  .about-more{margin-left:1rem}
+  .hero h1 small{font-size:.95rem}
+}
+
+/* ---------- nav underline follows the section you are in ---------- */
+/* Click-based fallback (all browsers): landing on / clicking #faq or #contact moves the underline */
+body:has(#faq:target,#contact:target) .nav a[aria-current]::after{opacity:0}
+body:has(#faq:target,#contact:target) .nav>a[href="#about"]::after{opacity:0}
+body:has(#faq:target) .nav>a[href="#faq"]::after,
+body:has(#contact:target) .nav>a[href="#contact"]::after{opacity:1}
+
+/* home page: FAQ gets its own nav-underline zone */
+.z-faq{view-timeline:--t-faq block;view-timeline-inset:45% 54%}
+@supports (animation-timeline:view()){
+  body.home .nav>a[href="#faq"]::after{animation-timeline:--t-faq}
+}

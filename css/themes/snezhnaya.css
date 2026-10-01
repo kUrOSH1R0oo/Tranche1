@@ -1,0 +1,14 @@
+/* Snezhnaya — frost, ice and deep teal */
+body.stops{
+  --st-page:#0e1a4d;--st-display:'Bodoni Moda','Playfair Display',Georgia,serif;--st-body:'Newsreader',Georgia,serif;
+  --st-hero-overlay:linear-gradient(90deg,rgba(38,50,140,.85) 0%,rgba(38,50,140,.4) 60%,rgba(20,30,110,.2) 100%);
+  --st-eyebrow-hero:#bfe0ff;--st-h1:#f2f6ff;--st-btn-bg:#e8f1ff;--st-btn-fg:#14236e;
+  --st-stats-bg:#12808c;--st-stats-fg:#eafcff;--st-stats-edge:#e6b64e;
+  --st-intro-bg:#e6ecf8;--st-intro-eyebrow:#12808c;--st-intro-h2:#26328c;--st-intro-p:#3f4f8f;--st-eyebrow-font:'Bodoni Moda',serif;
+  --st-stops-bg:#0e1a4d;--st-frame:#7fa6dd;--st-stop-overlay:linear-gradient(rgba(20,40,120,.42),rgba(20,40,120,.42));
+  --st-num:#bfe0ff;--st-link:#bfe0ff;--st-h1-weight:500;--st-h2-weight:600;--st-h3-weight:500;
+}
+.st-hero{background:var(--st-hero-overlay),url(../../assets/img/snezhnaya/hero.webp) center/cover no-repeat}
+.st-hero h1{font-size:6.2rem;letter-spacing:.04em}
+.st-eyebrow{font-size:1.5rem;margin-bottom:.2rem}
+.st-intro .eyebrow{font-size:1.1rem}

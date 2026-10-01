@@ -1,0 +1,60 @@
+/* Seven Winds Travel & Tours — shared base. Designed at 1440px; 1rem = 16px at that width and scales with the viewport. */
+:root{--nav-h:3.8rem;--navy:#202050;--ink:#2d3a66;--pink:#f7b6dd;--gold:#e4b45a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:min(calc(100vw / 90),calc(100vh / 56));scroll-behavior:smooth;scroll-padding-top:4rem}
+body{font-family:'Playfair Display',Georgia,serif;color:#fff;background:var(--navy);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:50;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 4rem;background:linear-gradient(90deg,#1e1e52,#4747a9);border-top:1px solid rgba(255,255,255,.28);box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.brand{display:flex;align-items:center;gap:.9rem;font-size:1.65rem;letter-spacing:.03em;text-transform:uppercase;color:#e9e6f5}
+.brand img{height:3.1rem;width:auto;margin-top:.3rem}
+.nav{display:flex;align-items:center;gap:2.4rem;font-weight:600;font-size:1rem;color:#eee9fb}
+.nav a{position:relative;padding:.2rem 0;transition:color .25s}
+.nav>a:hover,.nav .has-menu>a:hover{color:#f7b6dd}
+/* Nations dropdown — CSS only (hover, or keyboard focus) */
+.nav .has-menu{position:relative;padding:1.6rem 0;margin:-1.6rem 0}
+.nav .menu{position:absolute;top:calc(100% - 5.5px);left:50%;min-width:11.5rem;transform:translate(-50%,-.4rem);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s;
+  background:linear-gradient(#2a2a72,#3a3a98);border:1px solid rgba(255,255,255,.28);box-shadow:0 .5rem 1.2rem rgba(10,10,50,.45);padding:.3rem 0;text-align:center;z-index:60}
+.nav .has-menu:hover .menu,.nav .has-menu:has(:focus-visible) .menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.nav .menu li+li{border-top:1px solid rgba(255,255,255,.14)}
+.nav .menu a{display:block;padding:.55rem 1.2rem;font-size:1rem;color:#f4e9fb}
+.nav .menu a:hover,.nav .menu a[aria-current]{background:rgba(255,255,255,.14);color:#fff}
+.nav>a::after,.nav .has-menu>a::after{content:"";position:absolute;left:50%;bottom:-.7rem;width:5.4rem;height:1rem;transform:translateX(-50%);background:url(../assets/icons/nav-hover.png) center/contain no-repeat;opacity:0;transition:opacity .25s}
+.nav>a[aria-current]::after,.nav .has-menu>a[aria-current]::after{opacity:1}
+/* Home page, no JavaScript: the underline follows whichever section the clicked link targets (:target) */
+body:has(#about:target,#director:target,#mission:target,#nations:target,#contact:target) .nav>a[href="#top"]::after{opacity:0}
+body:has(#about:target,#director:target,#mission:target) .nav>a[href="#about"]::after{opacity:1}
+body:has(#nations:target) .nav .has-menu>a[href="#nations"]::after,
+body:has(#contact:target) .nav>a[href="#contact"]::after{opacity:1}
+
+/* shared bits */
+.star-title{display:flex;align-items:center;gap:.8rem}
+.star-title img{width:2rem;height:2rem}
+.btn-outline{display:inline-block;padding:.55rem 1.4rem;border:1px solid #cfcdf0;color:#eeecfb;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem}
+
+/* footer */
+.site-footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.3);padding:4rem 5rem 2rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;color:#dedcf3}
+.foot-grid{display:grid;grid-template-columns:1.25fr 1fr 1.25fr;gap:2rem}
+.foot-brand{display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem;font-family:'Playfair Display',serif;font-size:1.15rem;text-transform:uppercase;color:#fff}
+.foot-brand img{height:3.1rem;width:auto}
+.site-footer h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-size:.95rem;color:#fff;margin-bottom:.8rem}
+.site-footer li{line-height:1.45}
+.site-footer p{max-width:20rem;margin-bottom:1rem}
+.foot-note{margin-top:2.2rem;padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.28);font-family:'Playfair Display',serif;font-size:.6rem;color:#a9a7cf}
+
+/* mobile */
+@media (max-width:800px){
+  html{font-size:15px}
+  .site-header{padding:0 1rem;height:4rem}
+  .brand{font-size:1rem}.brand img{height:2.6rem}
+  .nav{gap:1rem;font-size:.8rem}
+  .nav>a::after,.nav .has-menu>a::after{width:3.4rem}
+  .nav .menu{left:auto;right:-.5rem;min-width:9.5rem;transform:translateY(-.4rem)}
+  .nav .has-menu:hover .menu,.nav .has-menu:has(:focus-visible) .menu{transform:none}
+  .foot-grid{grid-template-columns:1fr}
+  .site-footer{padding:2.5rem 1.5rem 1.5rem}
+}

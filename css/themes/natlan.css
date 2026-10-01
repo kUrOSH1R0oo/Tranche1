@@ -1,0 +1,14 @@
+/* Natlan — ember orange and canyon red */
+body.stops{
+  --st-page:#7a2c14;--st-display:'Playfair Display',Georgia,serif;--st-body:'Alegreya',Georgia,serif;
+  --st-hero-overlay:linear-gradient(rgba(120,40,20,.42),rgba(120,40,20,.35));
+  --st-eyebrow-hero:#ffd08a;--st-h1:#fff4e6;--st-btn-bg:#f7c14a;--st-btn-fg:#5a1f0a;
+  --st-stats-bg:#a8421a;--st-stats-fg:#fff1de;--st-stats-edge:#f7c14a;
+  --st-intro-bg:#fbe3c6;--st-intro-eyebrow:#c85e1e;--st-intro-h2:#8f2f10;--st-intro-p:#6a3a25;--st-eyebrow-font:'Playfair Display',serif;
+  --st-stops-bg:#7a2c14;--st-frame:#f2a04a;--st-stop-overlay:linear-gradient(rgba(120,40,20,.42),rgba(120,40,20,.42));
+  --st-num:#ffd08a;--st-link:#ffd08a;--st-h1-weight:700;--st-h2-weight:700;--st-h3-weight:600;
+}
+.st-hero{background:var(--st-hero-overlay),url(../../assets/img/natlan/hero.webp) center/cover no-repeat}
+.st-hero h1{font-size:6.6rem;letter-spacing:.04em;text-shadow:0 .2rem .8rem rgba(80,20,10,.35)}
+.st-eyebrow{font-size:1.5rem;margin-bottom:.2rem}
+.st-intro .eyebrow{font-size:1.1rem}

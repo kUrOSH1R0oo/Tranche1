@@ -1,0 +1,14 @@
+/* Fontaine — pale sky, gilt and deep water */
+body.stops{
+  --st-page:#15435f;--st-display:'Bodoni Moda','Playfair Display',Georgia,serif;--st-body:'Newsreader',Georgia,serif;
+  --st-hero-overlay:linear-gradient(90deg,rgba(18,44,88,.78) 0%,rgba(30,64,120,.42) 48%,rgba(30,64,120,.1) 100%);
+  --st-eyebrow-hero:#f0cf7a;--st-h1:#fff;--st-btn-bg:#e6b64e;--st-btn-fg:#1f3a5f;
+  --st-stats-bg:#1f3a5f;--st-stats-fg:#e9eef8;--st-stats-edge:#e6b64e;
+  --st-intro-bg:#eef1f8;--st-intro-eyebrow:#b8892e;--st-intro-h2:#1f3a5f;--st-intro-p:#3d5580;--st-eyebrow-font:'Bodoni Moda',serif;
+  --st-stops-bg:#15435f;--st-frame:#e6b64e;--st-stop-overlay:linear-gradient(rgba(10,50,80,.48),rgba(10,50,80,.48));
+  --st-num:#f0cf7a;--st-link:#f0cf7a;--st-h1-weight:500;--st-h2-weight:600;--st-h3-weight:500;
+}
+.st-hero{background:var(--st-hero-overlay),url(../../assets/img/fontaine/hero.jpg) center/cover no-repeat}
+.st-hero h1{font-size:6.2rem;letter-spacing:.04em}
+.st-eyebrow{font-size:1.5rem;margin-bottom:.2rem}
+.st-intro .eyebrow{font-size:1.1rem}
