@@ -110,32 +110,41 @@
   <section class="nations">
     <h2 class="star-title"><img src="assets/icons/star-blue.png" alt="">Explore the Seven Nations</h2>
     <p class="sub">Seven unique islands. Seven unforgettable journeys.</p>
+    <form class="package-filters" id="package-filters" aria-label="Filter tour packages">
+      <label>Minimum days<input id="filter-min-days" type="number" min="1" max="20" placeholder="Any"></label>
+      <label>Maximum days<input id="filter-max-days" type="number" min="1" max="20" placeholder="Any"></label>
+      <label>Minimum price (₱)<input id="filter-min-price" type="number" min="0" step="500" placeholder="Any"></label>
+      <label>Maximum price (₱)<input id="filter-max-price" type="number" min="0" step="500" placeholder="Any"></label>
+      <label class="filter-search">Search nation or tour focus<input id="filter-keyword" type="search" placeholder="For example, culture"></label>
+      <button class="btn-gold" id="reset-filters" type="button">Reset filters</button>
+    </form>
+    <p id="no-matching-packages" class="filter-empty" role="status" hidden>No matching packages.</p>
     <div class="nation-grid">
-      <a class="nation mondstadt" href="nations/mondstadt.html">
+      <a class="nation mondstadt" data-nation="Mondstadt" href="nations/mondstadt.html">
         <img class="photo" src="assets/img/nations/mondstadt-hero.jpg" alt="">
         <div class="label"><img class="crest" src="assets/icons/mondstadt.png" alt=""><h3>Mondstadt</h3><p>The City of Freedom</p><span class="go">Explore <img src="assets/icons/arrow-right.png" alt=""></span></div>
       </a>
-      <a class="nation liyue" href="nations/liyue.html">
+      <a class="nation liyue" data-nation="Liyue" href="nations/liyue.html">
         <img class="photo" src="assets/img/nations/liyue-hero.jpg" alt="">
         <div class="label"><img class="crest" src="assets/icons/liyue.png" alt=""><h3>Liyue</h3><p>The Harbor of Stone &amp; Commerce</p><span class="go">Explore <img src="assets/icons/arrow-right.png" alt=""></span></div>
       </a>
-      <a class="nation inazuma" href="nations/inazuma.html">
+      <a class="nation inazuma" data-nation="Inazuma" href="nations/inazuma.html">
         <img class="photo" src="assets/img/inazuma/hero.jpg" alt="">
         <div class="label"><img class="crest" src="assets/icons/inazuma.png" alt=""><h3>Inazuma</h3><p>The Realm of Eternal Thunder</p><span class="go">Explore <img src="assets/icons/arrow-right.png" alt=""></span></div>
       </a>
-      <a class="nation sumeru" href="nations/sumeru.html">
+      <a class="nation sumeru" data-nation="Sumeru" href="nations/sumeru.html">
         <img class="photo" src="assets/img/nations/sumeru-hero.jpg" alt="">
         <div class="label"><img class="crest" src="assets/icons/sumeru.png" alt=""><h3>Sumeru</h3><p>The City of Wisdom &amp; Rainforest Retreat</p><span class="go">Explore <img src="assets/icons/arrow-right.png" alt=""></span></div>
       </a>
-      <a class="nation fontaine" href="nations/fontaine.html">
+      <a class="nation fontaine" data-nation="Fontaine" href="nations/fontaine.html">
         <img class="photo" src="assets/img/fontaine/hero.jpg" alt="">
         <div class="label"><img class="crest" src="assets/icons/fontaine.png" alt=""><h3>Fontaine</h3><p>The Capital of Justice, Steam, and Aquanics</p><span class="go">Explore <img src="assets/icons/arrow-right.png" alt=""></span></div>
       </a>
-      <a class="nation natlan" href="nations/natlan.html">
+      <a class="nation natlan" data-nation="Natlan" href="nations/natlan.html">
         <img class="photo" src="assets/img/natlan/hero.webp" alt="">
         <div class="label"><img class="crest" src="assets/icons/natlan.png" alt=""><h3>Natlan</h3><p>The Land of Ash, Hot Springs, &amp; Valor</p><span class="go">Explore <img src="assets/icons/arrow-right.png" alt=""></span></div>
       </a>
-      <a class="nation snezhnaya" href="nations/snezhnaya.html">
+      <a class="nation snezhnaya" data-nation="Snezhnaya" href="nations/snezhnaya.html">
         <img class="photo" src="assets/img/snezhnaya/hero.webp" alt="">
         <div class="label"><img class="crest" src="assets/icons/snezhnaya.png" alt=""><h3>Snezhnaya</h3><p>The Eternal White Tundra</p><span class="go">Explore <img src="assets/icons/arrow-right.png" alt=""></span></div>
       </a>
@@ -161,7 +170,7 @@
     <h2 class="star-title"><img src="assets/icons/star-white.png" alt="">Frequently Asked Questions</h2>
     <p class="faq-intro">Quick answers about pricing, groups, and how to start. Can’t find yours? <a href="mailto:hello@sevenwindstravel.example?subject=Question%20%E2%80%94%20Seven%20Winds%20Travel%20%26%20Tours">Email the Director</a>.</p>
     <ul class="faq-list">
-      <li><details><summary>How do I book a tour across Teyvat?</summary><p>Booking is handled personally by the Director. Use the “Email the Director” button and tell us your preferred nation, travel dates, and number of travelers. We’ll reply with a curated route and the details to confirm. Online booking and payment aren’t available on this website yet.</p></details></li>
+      <li><details><summary>How do I book a tour across Teyvat?</summary><p>For a real reply, email the Director with your preferred nation, travel dates, and number of travelers. The form on this page is a static demonstration: it validates details in your browser but does not send or save them. Online booking and payment are unavailable on this website yet.</p></details></li>
       <li><details><summary>What’s included in the base price?</summary><p>The “from” price on each nation page is per person and covers the core package: accommodation for the nights listed, guided visits to the three featured stops, local transfers between them, and itinerary planning by the Director.</p></details></li>
       <li><details><summary>What’s not included?</summary><p>Not included in the base price:</p><ul><li>Travel to your starting point</li><li>Meals and personal expenses not listed in the itinerary</li><li>Optional add-ons and upgrades</li><li>Pass or permit fees, where required</li></ul></details></li>
       <li><details><summary>How many people can join a tour?</summary><p>Prices are quoted per person. Solo travelers, couples, families, and small groups are all welcome. For larger groups, include your party size in your inquiry and the Director will confirm availability and any group arrangements.</p></details></li>
@@ -175,15 +184,27 @@
 <section class="cta-band z-contact" id="contact">
     <p class="cta-kicker">Start planning</p>
     <h2>Ready to plan your journey?</h2>
-    <p class="cta-lead">Tell us which nation you’d like to visit, your travel dates, and how many are traveling. The Director will reply personally with a curated route.</p>
+    <p class="cta-lead">Enter your nation, travel date, and traveler count below. This static demo validates the details in your browser; it does not send or save them.</p>
+    <form class="inquiry-form" id="contact-inquiry" data-inquiry-form novalidate>
+      <div class="inquiry-grid">
+        <label for="contact-name">Full name</label><div class="inquiry-field"><input id="contact-name" name="full_name" type="text" minlength="2" maxlength="80" autocomplete="name" required aria-describedby="contact-name-error"><span class="field-error" id="contact-name-error" hidden></span></div>
+        <label for="contact-email">Email</label><div class="inquiry-field"><input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" required aria-describedby="contact-email-error"><span class="field-error" id="contact-email-error" hidden></span></div>
+        <label for="contact-phone">Phone number</label><div class="inquiry-field"><input id="contact-phone" name="phone" type="tel" maxlength="30" autocomplete="tel" required aria-describedby="contact-phone-error"><span class="field-error" id="contact-phone-error" hidden></span></div>
+        <label for="contact-nation">Nation</label><div class="inquiry-field"><select id="contact-nation" name="nation" required aria-describedby="contact-nation-error"><option value="">Choose a nation</option><option value="Mondstadt">Mondstadt</option><option value="Liyue">Liyue</option><option value="Inazuma">Inazuma</option><option value="Sumeru">Sumeru</option><option value="Fontaine">Fontaine</option><option value="Natlan">Natlan</option><option value="Snezhnaya">Snezhnaya</option></select><span class="field-error" id="contact-nation-error" hidden></span></div>
+        <label for="contact-date">Preferred travel date</label><div class="inquiry-field"><input id="contact-date" name="travel_date" type="date" required aria-describedby="contact-date-error"><span class="field-error" id="contact-date-error" hidden></span></div>
+        <label for="contact-travelers">Number of travelers</label><div class="inquiry-field"><input id="contact-travelers" name="num_travelers" type="number" min="1" max="20" step="1" value="1" required aria-describedby="contact-travelers-error"><span class="field-error" id="contact-travelers-error" hidden></span></div>
+        <label for="contact-message">Message</label><div class="inquiry-field"><textarea id="contact-message" name="message" minlength="10" maxlength="1000" rows="4" required aria-describedby="contact-message-error"></textarea><span class="field-error" id="contact-message-error" hidden></span></div>
+      </div>
+      <p class="form-success" data-form-success role="status" aria-live="polite"></p>
+    </form>
     <div class="cta-actions">
-      <a class="btn-gold" href="mailto:hello@sevenwindstravel.example?subject=Travel%20inquiry%20%E2%80%94%20Seven%20Winds%20Travel%20%26%20Tours&amp;body=Hello%20Seven%20Winds%20Travel%20%26%20Tours%2C%0A%0AI%27d%20like%20to%20plan%20a%20trip.%0A%0ANation%28s%29%20of%20interest%3A%0APreferred%20travel%20dates%3A%0ANumber%20of%20travelers%3A%0AQuestions%3A%0A">Email the Director</a>
+      <button class="btn-gold" type="submit" form="contact-inquiry">Validate inquiry</button>
       <a class="btn-ghost" href="#nations">Browse the seven nations</a>
     </div>
     <ol class="cta-steps">
-      <li><b>Send your inquiry</b>Nation, dates, and party size is all we need to begin.</li>
-      <li><b>Receive a curated route</b>The Director shapes the itinerary around your pace.</li>
-      <li><b>Confirm the details</b>Everything is finalized personally before you travel.</li>
+      <li><b>Enter your inquiry details</b>Nation, dates, and party size are all we need to begin.</li>
+      <li><b>Plan your route by email</b>Email the Director directly for a real itinerary.</li>
+      <li><b>Confirm directly with the Director</b>This website does not reserve or confirm tours.</li>
     </ol>
     <p class="cta-note">Online booking and payment aren’t available on this website yet. Prefer to read first? See the <a href="#faq">FAQ</a>.</p>
   </section>
@@ -208,5 +229,8 @@
   <div class="foot-bottom"><p class="foot-note">© 2026 Seven Winds Travel &amp; Tours · Teyvat Travel Services. All rights reserved.</p><a href="#">Back to top ↑</a></div>
 </footer>
 
+<script src="js/data.js" defer></script>
+<script src="js/filter.js" defer></script>
+<script src="js/inquiry.js" defer></script>
 </body>
 </html>

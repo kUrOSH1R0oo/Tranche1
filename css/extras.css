@@ -145,3 +145,48 @@ body:has(#contact:target) .nav>a[href="#contact"]::after{opacity:1}
 @supports (animation-timeline:view()){
   body.home .nav>a[href="#faq"]::after{animation-timeline:--t-faq}
 }
+
+/* ---------- inquiry forms, package filters, and booking estimate ---------- */
+.package-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem 1rem;max-width:66rem;margin:0 auto 1rem;padding:1.2rem;background:rgba(255,255,255,.55);border:1px solid rgba(74,111,192,.35);color:#2a3b70;text-align:left;font-family:'Plus Jakarta Sans',sans-serif}
+.package-filters label{display:grid;gap:.3rem;font-size:.78rem;font-weight:600}
+.package-filters input,.inquiry-form input,.inquiry-form select,.inquiry-form textarea{width:100%;min-width:0;padding:.65rem .75rem;border:1px solid rgba(207,205,240,.65);border-radius:.2rem;background:#f5f2fb;color:#202050;font:inherit}
+.package-filters input{font-size:.85rem}
+.package-filters .filter-search{grid-column:span 2}
+.package-filters button{align-self:end;justify-self:start;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
+.nation[hidden]{display:none}
+.filter-empty{margin:.8rem auto 1rem;color:#3b4773;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;text-align:center}
+.inquiry-form{max-width:48rem;margin:0 auto 2rem;padding:1.4rem 1.6rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:.35rem;color:#f4f1ff;text-align:left;font-family:'Plus Jakarta Sans',sans-serif}
+.cta-band .inquiry-form{margin-bottom:1rem}
+.cta-band .inquiry-form+.cta-actions{margin-top:0;margin-bottom:2rem}
+.inquiry-grid{display:grid;grid-template-columns:12rem minmax(0,1fr);align-items:start;gap:.65rem 1rem}
+.inquiry-grid>label{padding-top:.65rem;font-size:.85rem;font-weight:600;color:#f4f1ff}
+.inquiry-field{min-width:0}
+.inquiry-form input,.inquiry-form select,.inquiry-form textarea{font-size:.9rem}
+.inquiry-form textarea{resize:vertical;min-height:6rem}
+.field-error{display:block;margin-top:.25rem;color:#ffc4ce;font-size:.78rem;line-height:1.4}
+.field-error[hidden]{display:none}
+.form-success{min-height:1.4em;margin:.85rem 0;color:#f7d98c;font-size:.85rem;line-height:1.45}
+.inquiry-submit,.cta-actions .btn-gold{border:0;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
+.inquiry-form button:disabled{cursor:default;opacity:.65;transform:none}
+.estimate-line{margin:.6rem 0 1rem;padding:.75rem 1rem;border-left:3px solid var(--gold);background:rgba(255,255,255,.08);color:#f4f1ff;font-size:.9rem}
+.estimate-line strong{display:inline-block;margin:0 .35rem;color:var(--gold);font-size:1.15rem}
+.estimate-line span{display:block;margin-top:.2rem;color:#dedcf3;font-size:.75rem}
+.booking-modal[hidden]{display:none}
+.booking-modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:1rem;background:rgba(12,13,43,.78)}
+.booking-panel{position:relative;width:min(100%,47rem);max-height:calc(100vh - 2rem);overflow:auto;padding:2rem;background:var(--st-stats-bg,#202050);border:1px solid rgba(255,255,255,.32);border-top:3px solid var(--st-frame,var(--gold));border-radius:.35rem;box-shadow:0 .7rem 2rem rgba(0,0,0,.4);color:var(--st-stats-fg,#fff)}
+.booking-panel h2{margin:.15rem 2.5rem .6rem 0;font-family:'Playfair Display',Georgia,serif;font-size:1.8rem}
+.booking-panel .cta-kicker{margin:0;color:var(--st-num,var(--pink));font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
+.modal-intro{max-width:39rem;margin-bottom:1rem;color:#dedcf3;font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;line-height:1.5}
+.booking-panel .inquiry-form{max-width:none;margin:0;padding:1rem 0 0;border:0;background:none}
+.booking-panel .inquiry-grid{grid-template-columns:10.5rem minmax(0,1fr)}
+.modal-close{position:absolute;top:.8rem;right:.9rem;width:2.4rem;height:2.4rem;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:transparent;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
+.booking-panel .inquiry-submit{background:var(--st-btn-bg,var(--gold));color:var(--st-btn-fg,var(--navy));border:1px solid var(--st-btn-border,transparent);border-radius:2rem}
+
+@media (max-width:800px){
+  .package-filters{grid-template-columns:repeat(2,minmax(0,1fr));margin:.8rem 1.4rem;padding:1rem}
+  .package-filters .filter-search{grid-column:1/-1}
+  .inquiry-form{padding:1rem;margin-bottom:1.5rem}
+  .inquiry-grid,.booking-panel .inquiry-grid{grid-template-columns:1fr;gap:.25rem}
+  .inquiry-grid>label{padding-top:.45rem}
+  .booking-panel{padding:1.4rem 1rem}
+}
