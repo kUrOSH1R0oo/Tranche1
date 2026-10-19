@@ -1,7 +1,7 @@
-/* Seven Winds Travel & Tours — shared base. Designed at 1440px; 1rem = 16px at that width and scales with the viewport. */
+/* Seven Winds Travel & Tours — shared base. Root text size stays between 14px and 18px. */
 :root{--nav-h:3.8rem;--navy:#202050;--ink:#2d3a66;--pink:#f7b6dd;--gold:#e4b45a}
 *{box-sizing:border-box;margin:0;padding:0}
-html{font-size:min(calc(100vw / 90),calc(100vh / 56));scroll-behavior:smooth;scroll-padding-top:4rem}
+html{font-size:clamp(14px,1.1vw,18px);scroll-behavior:smooth;scroll-padding-top:4rem}
 body{font-family:'Playfair Display',Georgia,serif;color:#fff;background:var(--navy);line-height:1.5;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -57,4 +57,8 @@ body:has(#contact:target) .nav>a[href="#contact"]::after{opacity:1}
   .nav .has-menu:hover .menu,.nav .has-menu:has(:focus-visible) .menu{transform:none}
   .foot-grid{grid-template-columns:1fr}
   .site-footer{padding:2.5rem 1.5rem 1.5rem}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
 }

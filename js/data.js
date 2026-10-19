@@ -1,14 +1,4 @@
-// Shared package details copied from each nation's existing stats strip.
-const NATION_NAMES = [
-  "Mondstadt",
-  "Liyue",
-  "Inazuma",
-  "Sumeru",
-  "Fontaine",
-  "Natlan",
-  "Snezhnaya"
-];
-
+// Shared package details used by filtering, inquiry forms, and nation-page summaries.
 const PACKAGE_DATA = [
   { nation: "Mondstadt", days: 3, nights: 2, price_per_person: 12500, focus: "nature & cultural sightseeing" },
   { nation: "Liyue", days: 4, nights: 3, price_per_person: 15000, focus: "cultural & scenic exploration" },
@@ -18,3 +8,7 @@ const PACKAGE_DATA = [
   { nation: "Natlan", days: 4, nights: 3, price_per_person: 16500, focus: "adventure & cultural exploration" },
   { nation: "Snezhnaya", days: 5, nights: 4, price_per_person: 22000, focus: "winter & scenic exploration" }
 ];
+
+const NATION_NAMES = PACKAGE_DATA.map(function (packageInfo) {
+  return packageInfo.nation;
+});

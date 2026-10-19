@@ -31,10 +31,6 @@
 .btn-gold:hover{filter:brightness(1.08);transform:translateY(-.1rem)}
 .btn-ghost{border:1px solid #cfcdf0;color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.12)}
-.cta-steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:56rem;margin:0 auto 2rem;text-align:left;counter-reset:step}
-.cta-steps li{counter-increment:step;position:relative;padding:1.2rem 1.3rem 1.3rem 4rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:.4rem;font-size:.9rem;line-height:1.5;color:#dedcf3}
-.cta-steps li::before{content:counter(step);position:absolute;left:1.1rem;top:1.1rem;width:2.1rem;height:2.1rem;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--navy);font-weight:700}
-.cta-steps b{display:block;color:#fff;font-size:1rem;margin-bottom:.15rem}
 .cta-note{font-size:.8rem;color:#a9a7cf;max-width:36rem;margin:0 auto}
 .cta-note a{color:var(--pink);border-bottom:1px solid currentColor}
 
@@ -120,7 +116,6 @@
   .nav{width:100%;justify-content:space-between;gap:.3rem;font-size:.74rem}
   .nav .has-menu{padding:.9rem 0;margin:-.9rem 0}
   .cta-band{padding:3.2rem 1.4rem 3.5rem}.cta-band h2{font-size:1.8rem}
-  .cta-steps{grid-template-columns:1fr}
   .st-info{padding:3rem 1.4rem}.st-info h2{font-size:1.9rem}
   .st-tips{grid-template-columns:1fr 1fr;gap:.8rem}.st-incl{grid-template-columns:1fr}
   .st-more{grid-template-columns:1fr;padding:1.4rem}.st-more .next{text-align:left;align-items:flex-start}
@@ -148,24 +143,34 @@ body:has(#contact:target) .nav>a[href="#contact"]::after{opacity:1}
 
 /* ---------- inquiry forms, package filters, and booking estimate ---------- */
 .package-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem 1rem;max-width:66rem;margin:0 auto 1rem;padding:1.2rem;background:rgba(255,255,255,.55);border:1px solid rgba(74,111,192,.35);color:#2a3b70;text-align:left;font-family:'Plus Jakarta Sans',sans-serif}
-.package-filters label{display:grid;gap:.3rem;font-size:.78rem;font-weight:600}
+.package-filters label{display:grid;gap:.3rem;font-size:.85rem;font-weight:600}
 .package-filters input,.inquiry-form input,.inquiry-form select,.inquiry-form textarea{width:100%;min-width:0;padding:.65rem .75rem;border:1px solid rgba(207,205,240,.65);border-radius:.2rem;background:#f5f2fb;color:#202050;font:inherit}
 .package-filters input{font-size:.85rem}
 .package-filters .filter-search{grid-column:span 2}
 .package-filters button{align-self:end;justify-self:start;border:0;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
 .nation[hidden]{display:none}
 .filter-empty{margin:.8rem auto 1rem;color:#3b4773;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;text-align:center}
+.filter-no-results{max-width:66rem;margin:1rem auto 1.5rem;padding:1.2rem 1.5rem;border:1px solid rgba(74,111,192,.35);border-radius:.35rem;background:rgba(255,255,255,.6);color:#2a3b70;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;line-height:1.5;text-align:center}
+.filter-no-results[hidden]{display:none}
 .inquiry-form{max-width:48rem;margin:0 auto 2rem;padding:1.4rem 1.6rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:.35rem;color:#f4f1ff;text-align:left;font-family:'Plus Jakarta Sans',sans-serif}
 .cta-band .inquiry-form{margin-bottom:1rem}
 .cta-band .inquiry-form+.cta-actions{margin-top:0;margin-bottom:2rem}
 .inquiry-grid{display:grid;grid-template-columns:12rem minmax(0,1fr);align-items:start;gap:.65rem 1rem}
 .inquiry-grid>label{padding-top:.65rem;font-size:.85rem;font-weight:600;color:#f4f1ff}
 .inquiry-field{min-width:0}
+.phone-input-group{display:flex;min-width:0}
+.phone-prefix{display:flex;align-items:center;padding:0 .85rem;border:1px solid rgba(207,205,240,.65);border-right:0;border-radius:.2rem 0 0 .2rem;background:#e5e0f0;color:#202050;font-size:.9rem;font-weight:700}
+.phone-input-group input{flex:1;width:auto;border-radius:0 .2rem .2rem 0}
 .inquiry-form input,.inquiry-form select,.inquiry-form textarea{font-size:.9rem}
 .inquiry-form textarea{resize:vertical;min-height:6rem}
-.field-error{display:block;margin-top:.25rem;color:#ffc4ce;font-size:.78rem;line-height:1.4}
+.filter-error{display:block;color:#8f1c30;font-size:.82rem;font-weight:600;line-height:1.35}
+.filter-error[hidden]{display:none}
+.field-error{display:block;margin-top:.25rem;color:#ffc4ce;font-size:.85rem;line-height:1.4}
 .field-error[hidden]{display:none}
 .form-success{min-height:1.4em;margin:.85rem 0;color:#f7d98c;font-size:.85rem;line-height:1.45}
+.form-success[data-status-kind="error"]{color:#ffc4ce}
+.form-note{margin:.8rem 0;color:#dedcf3;font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem}
+.inquiry-form [aria-invalid="true"],.package-filters [aria-invalid="true"]{border-color:#b42318;box-shadow:0 0 0 2px rgba(180,35,24,.22)}
 .inquiry-submit,.cta-actions .btn-gold{border:0;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
 .inquiry-form button:disabled{cursor:default;opacity:.65;transform:none}
 .estimate-line{margin:.6rem 0 1rem;padding:.75rem 1rem;border-left:3px solid var(--gold);background:rgba(255,255,255,.08);color:#f4f1ff;font-size:.9rem}

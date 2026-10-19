@@ -111,14 +111,13 @@
     <h2 class="star-title"><img src="assets/icons/star-blue.png" alt="">Explore the Seven Nations</h2>
     <p class="sub">Seven unique islands. Seven unforgettable journeys.</p>
     <form class="package-filters" id="package-filters" aria-label="Filter tour packages">
-      <label>Minimum days<input id="filter-min-days" type="number" min="1" max="20" placeholder="Any"></label>
-      <label>Maximum days<input id="filter-max-days" type="number" min="1" max="20" placeholder="Any"></label>
-      <label>Minimum price (₱)<input id="filter-min-price" type="number" min="0" step="500" placeholder="Any"></label>
-      <label>Maximum price (₱)<input id="filter-max-price" type="number" min="0" step="500" placeholder="Any"></label>
-      <label class="filter-search">Search nation or tour focus<input id="filter-keyword" type="search" placeholder="For example, culture"></label>
-      <button class="btn-gold" id="reset-filters" type="button">Reset filters</button>
+      <label>Minimum days<input id="filter-min-days" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="1-6" aria-describedby="filter-min-days-error"><span class="filter-error" id="filter-min-days-error" hidden></span></label>
+      <label>Maximum days<input id="filter-max-days" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="3-20" aria-describedby="filter-max-days-error"><span class="filter-error" id="filter-max-days-error" hidden></span></label>
+      <label>Maximum budget (₱)<input id="filter-max-price" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="₱12,500 above" aria-describedby="filter-max-price-error"><span class="filter-error" id="filter-max-price-error" hidden></span></label>
+      <label class="filter-search">Search nation or interest<input id="filter-keyword" type="search" placeholder="For example, nature, architecture"></label>
+      <button class="btn-gold" id="reset-filters" type="button">Clear filters</button>
     </form>
-    <p id="no-matching-packages" class="filter-empty" role="status" hidden>No matching packages.</p>
+    <p id="package-filter-status" class="filter-empty" role="status" aria-live="polite">Showing all 7 tour packages.</p>
     <div class="nation-grid">
       <a class="nation mondstadt" data-nation="Mondstadt" href="nations/mondstadt.html">
         <img class="photo" src="assets/img/nations/mondstadt-hero.jpg" alt="">
@@ -149,6 +148,7 @@
         <div class="label"><img class="crest" src="assets/icons/snezhnaya.png" alt=""><h3>Snezhnaya</h3><p>The Eternal White Tundra</p><span class="go">Explore <img src="assets/icons/arrow-right.png" alt=""></span></div>
       </a>
     </div>
+    <p id="package-filter-empty" class="filter-no-results" hidden aria-hidden="true">No tours match your current filters. Try changing or clearing it.</p>
   </section>
 
   <!-- Why travel -->
@@ -168,44 +168,28 @@
   <!-- FAQ -->
   <section class="faq profile-faq zone z-faq" id="faq">
     <h2 class="star-title"><img src="assets/icons/star-white.png" alt="">Frequently Asked Questions</h2>
-    <p class="faq-intro">Quick answers about pricing, groups, and how to start. Can’t find yours? <a href="mailto:hello@sevenwindstravel.example?subject=Question%20%E2%80%94%20Seven%20Winds%20Travel%20%26%20Tours">Email the Director</a>.</p>
+    <p class="faq-intro">Quick answers about pricing, groups, and how to start. Can’t find yours? <a href="#contact">Go to the inquiry form</a>.</p>
     <ul class="faq-list">
-      <li><details><summary>How do I book a tour across Teyvat?</summary><p>For a real reply, email the Director with your preferred nation, travel dates, and number of travelers. The form on this page is a static demonstration: it validates details in your browser but does not send or save them. Online booking and payment are unavailable on this website yet.</p></details></li>
+      <li><details><summary>How do I book a tour across Teyvat?</summary><p>This website is a demo. The forms check your details in the browser, but do not send or save them. Online booking and payment are not available.</p></details></li>
       <li><details><summary>What’s included in the base price?</summary><p>The “from” price on each nation page is per person and covers the core package: accommodation for the nights listed, guided visits to the three featured stops, local transfers between them, and itinerary planning by the Director.</p></details></li>
       <li><details><summary>What’s not included?</summary><p>Not included in the base price:</p><ul><li>Travel to your starting point</li><li>Meals and personal expenses not listed in the itinerary</li><li>Optional add-ons and upgrades</li><li>Pass or permit fees, where required</li></ul></details></li>
-      <li><details><summary>How many people can join a tour?</summary><p>Prices are quoted per person. Solo travelers, couples, families, and small groups are all welcome. For larger groups, include your party size in your inquiry and the Director will confirm availability and any group arrangements.</p></details></li>
-      <li><details><summary>Are travel passes or permits required for restricted nations like Inazuma?</summary><p>Some regions require passes. When you inquire, we’ll let you know what your route needs so you can prepare in time.</p></details></li>
-      <li><details><summary>Can I customize a multi-nation tour itinerary?</summary><p>Yes. Combine any of the seven nations and we’ll plan the connecting travel between them. Combined trips are quoted on request, since price and length vary by combination.</p></details></li>
-      <li><details><summary>What safety measures are provided during high-risk region tours?</summary><p>High-risk routes are planned with local partner guides and weather monitoring. Before you travel, you’ll receive clear guidance on conditions, what to bring, and what to wear.</p></details></li>
-      <li><details><summary>How soon will I get a reply?</summary><p>The Director answers every inquiry personally, so reply times can vary during busy travel seasons. Including your dates and party size in your first message helps us respond faster.</p></details></li>
+      <li><details><summary>How many people can join a tour?</summary><p>Prices are shown per person. The demo form accepts groups of 1 to 20 travelers, but it does not send a request or confirm availability.</p></details></li>
+      <li><details><summary>Are travel passes or permits required for restricted nations like Inazuma?</summary><p>This demo does not check real travel requirements. Check the latest official guidance before planning a real trip.</p></details></li>
+      <li><details><summary>Can I customize a multi-nation tour itinerary?</summary><p>The demo shows one nation per package. It does not create custom itineraries or calculate combined trip prices.</p></details></li>
+      <li><details><summary>What safety measures are provided during high-risk region tours?</summary><p>This demo does not arrange tours, guides, or safety support.</p></details></li>
+      <li><details><summary>Will my inquiry get a reply?</summary><p>No. The demo form does not send or save your details, so nobody receives the inquiry.</p></details></li>
     </ul>
   </section>
 
 <section class="cta-band z-contact" id="contact">
     <p class="cta-kicker">Start planning</p>
     <h2>Ready to plan your journey?</h2>
-    <p class="cta-lead">Enter your nation, travel date, and traveler count below. This static demo validates the details in your browser; it does not send or save them.</p>
-    <form class="inquiry-form" id="contact-inquiry" data-inquiry-form novalidate>
-      <div class="inquiry-grid">
-        <label for="contact-name">Full name</label><div class="inquiry-field"><input id="contact-name" name="full_name" type="text" minlength="2" maxlength="80" autocomplete="name" required aria-describedby="contact-name-error"><span class="field-error" id="contact-name-error" hidden></span></div>
-        <label for="contact-email">Email</label><div class="inquiry-field"><input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" required aria-describedby="contact-email-error"><span class="field-error" id="contact-email-error" hidden></span></div>
-        <label for="contact-phone">Phone number</label><div class="inquiry-field"><input id="contact-phone" name="phone" type="tel" maxlength="30" autocomplete="tel" required aria-describedby="contact-phone-error"><span class="field-error" id="contact-phone-error" hidden></span></div>
-        <label for="contact-nation">Nation</label><div class="inquiry-field"><select id="contact-nation" name="nation" required aria-describedby="contact-nation-error"><option value="">Choose a nation</option><option value="Mondstadt">Mondstadt</option><option value="Liyue">Liyue</option><option value="Inazuma">Inazuma</option><option value="Sumeru">Sumeru</option><option value="Fontaine">Fontaine</option><option value="Natlan">Natlan</option><option value="Snezhnaya">Snezhnaya</option></select><span class="field-error" id="contact-nation-error" hidden></span></div>
-        <label for="contact-date">Preferred travel date</label><div class="inquiry-field"><input id="contact-date" name="travel_date" type="date" required aria-describedby="contact-date-error"><span class="field-error" id="contact-date-error" hidden></span></div>
-        <label for="contact-travelers">Number of travelers</label><div class="inquiry-field"><input id="contact-travelers" name="num_travelers" type="number" min="1" max="20" step="1" value="1" required aria-describedby="contact-travelers-error"><span class="field-error" id="contact-travelers-error" hidden></span></div>
-        <label for="contact-message">Message</label><div class="inquiry-field"><textarea id="contact-message" name="message" minlength="10" maxlength="1000" rows="4" required aria-describedby="contact-message-error"></textarea><span class="field-error" id="contact-message-error" hidden></span></div>
-      </div>
-      <p class="form-success" data-form-success role="status" aria-live="polite"></p>
-    </form>
+    <p class="cta-lead">The form checks your details in the browser. This demo does not send or save them.</p>
+    <div class="inquiry-form-mount" data-inquiry-form-mount data-form-id="contact-inquiry" data-form-type="contact" data-default-nation=""></div><noscript><p class="form-note">Turn on JavaScript to use this demo form.</p></noscript>
     <div class="cta-actions">
-      <button class="btn-gold" type="submit" form="contact-inquiry">Validate inquiry</button>
+      <button class="btn-gold" type="button" data-submit-form="contact-inquiry">Check inquiry details</button>
       <a class="btn-ghost" href="#nations">Browse the seven nations</a>
     </div>
-    <ol class="cta-steps">
-      <li><b>Enter your inquiry details</b>Nation, dates, and party size are all we need to begin.</li>
-      <li><b>Plan your route by email</b>Email the Director directly for a real itinerary.</li>
-      <li><b>Confirm directly with the Director</b>This website does not reserve or confirm tours.</li>
-    </ol>
     <p class="cta-note">Online booking and payment aren’t available on this website yet. Prefer to read first? See the <a href="#faq">FAQ</a>.</p>
   </section>
 
@@ -220,8 +204,8 @@
     <div><h4>Explore</h4><ul><li><a href="nations/mondstadt.html">Mondstadt</a></li><li><a href="nations/liyue.html">Liyue</a></li><li><a href="nations/inazuma.html">Inazuma</a></li><li><a href="nations/sumeru.html">Sumeru</a></li><li><a href="nations/fontaine.html">Fontaine</a></li><li><a href="nations/natlan.html">Natlan</a></li><li><a href="nations/snezhnaya.html">Snezhnaya</a></li></ul></div>
     <div>
       <h4>Start planning</h4>
-      <p>Tell us your dates and party setup. We’ll take care of the route.</p>
-      <a class="foot-mail" href="mailto:ivan@sevenwindstravel.local">ivan@sevenwindstravel.local</a><br>
+      <p>Use the inquiry form to check your trip details. This demo does not send or save requests.</p>
+      <a class="foot-mail" href="#contact">Go to the inquiry form</a><br>
       <a class="btn-outline" href="#contact">Booking inquiry</a>
       <div class="foot-links"><a href="#about">Company Profile</a><a href="#faq">FAQ</a></div>
     </div>

@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <div class="st-stats"><span>5 days / 4 nights</span><span>from ₱20,000 per person</span><span>culture, architecture &amp; art</span></div>
+  <div class="st-stats"><span data-package-duration>5 days / 4 nights</span><span>from <span data-package-price>₱20,000</span> per person</span><span data-package-focus>culture, architecture &amp; art</span></div>
 
   <section class="st-intro">
     <div><p class="eyebrow">Capital of justice &amp; steam</p><h2>Elegance in every current.</h2></div>
@@ -49,13 +49,13 @@
 
   <section class="st-stops">
     <article class="stop" style="--img:url(../assets/img/fontaine/court-of-fontaine.webp)">
-      <div class="copy"><span class="n">01</span><h3>Court of Fontaine</h3><p>Grand city center and architectural destination.</p><a href="mailto:hello@sevenwindstravel.example?subject=Inquiry%3A%20Fontaine%20%E2%80%94%20Court%20of%20Fontaine&amp;body=Hello%20Seven%20Winds%20Travel%20%26%20Tours%2C%0A%0AI%27m%20interested%20in%20Court%20of%20Fontaine%20as%20part%20of%20the%20Fontaine%20package.%0A%0APreferred%20travel%20dates%3A%0ANumber%20of%20travelers%3A%0AQuestions%3A%0A">Inquire about this stop</a></div>
+      <div class="copy"><span class="n">01</span><h3>Court of Fontaine</h3><p>Grand city center and architectural destination.</p><a href="#contact" data-stop-inquiry>Inquire about this stop</a></div>
     </article>
     <article class="stop right" style="--img:url(../assets/img/fontaine/opera-epiclese.webp)">
-      <div class="copy"><span class="n">02</span><h3>Opera Epiclese</h3><p>A cultural and performing arts landmark.</p><a href="mailto:hello@sevenwindstravel.example?subject=Inquiry%3A%20Fontaine%20%E2%80%94%20Opera%20Epiclese&amp;body=Hello%20Seven%20Winds%20Travel%20%26%20Tours%2C%0A%0AI%27m%20interested%20in%20Opera%20Epiclese%20as%20part%20of%20the%20Fontaine%20package.%0A%0APreferred%20travel%20dates%3A%0ANumber%20of%20travelers%3A%0AQuestions%3A%0A">Inquire about this stop</a></div>
+      <div class="copy"><span class="n">02</span><h3>Opera Epiclese</h3><p>A cultural and performing arts landmark.</p><a href="#contact" data-stop-inquiry>Inquire about this stop</a></div>
     </article>
     <article class="stop" style="--img:url(../assets/img/fontaine/lucine-fountain.webp)">
-      <div class="copy"><span class="n">03</span><h3>Lucine Fountain</h3><p>A scenic fountain and symbolic destination.</p><a href="mailto:hello@sevenwindstravel.example?subject=Inquiry%3A%20Fontaine%20%E2%80%94%20Lucine%20Fountain&amp;body=Hello%20Seven%20Winds%20Travel%20%26%20Tours%2C%0A%0AI%27m%20interested%20in%20Lucine%20Fountain%20as%20part%20of%20the%20Fontaine%20package.%0A%0APreferred%20travel%20dates%3A%0ANumber%20of%20travelers%3A%0AQuestions%3A%0A">Inquire about this stop</a></div>
+      <div class="copy"><span class="n">03</span><h3>Lucine Fountain</h3><p>A scenic fountain and symbolic destination.</p><a href="#contact" data-stop-inquiry>Inquire about this stop</a></div>
     </article>
   </section>
 
@@ -101,30 +101,12 @@
 <section class="cta-band" id="contact">
     <p class="cta-kicker">Start planning</p>
     <h2>Ready to plan your journey?</h2>
-    <p class="cta-lead">Enter your nation, travel date, and traveler count below. This static demo validates the details in your browser; it does not send or save them.</p>
-        <form class="inquiry-form" id="contact-inquiry" data-inquiry-form novalidate>
-  <div class="inquiry-grid">
-    <label for="contact-name">Full name</label><div class="inquiry-field"><input id="contact-name" name="full_name" type="text" minlength="2" maxlength="80" autocomplete="name" required aria-describedby="contact-name-error"><span class="field-error" id="contact-name-error" hidden></span></div>
-    <label for="contact-email">Email</label><div class="inquiry-field"><input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" required aria-describedby="contact-email-error"><span class="field-error" id="contact-email-error" hidden></span></div>
-    <label for="contact-phone">Phone number</label><div class="inquiry-field"><input id="contact-phone" name="phone" type="tel" maxlength="30" autocomplete="tel" required aria-describedby="contact-phone-error"><span class="field-error" id="contact-phone-error" hidden></span></div>
-    <label for="contact-nation">Nation</label><div class="inquiry-field"><select id="contact-nation" name="nation" required aria-describedby="contact-nation-error"><option value="">Choose a nation</option><option value="Mondstadt">Mondstadt</option><option value="Liyue">Liyue</option><option value="Inazuma">Inazuma</option><option value="Sumeru">Sumeru</option><option value="Fontaine" selected>Fontaine</option><option value="Natlan">Natlan</option><option value="Snezhnaya">Snezhnaya</option></select><span class="field-error" id="contact-nation-error" hidden></span></div>
-    <label for="contact-date">Preferred travel date</label><div class="inquiry-field"><input id="contact-date" name="travel_date" type="date" required aria-describedby="contact-date-error"><span class="field-error" id="contact-date-error" hidden></span></div>
-    <label for="contact-travelers">Number of travelers</label><div class="inquiry-field"><input id="contact-travelers" name="num_travelers" type="number" min="1" max="20" step="1" value="1" required aria-describedby="contact-travelers-error"><span class="field-error" id="contact-travelers-error" hidden></span></div>
-    <label for="contact-message">Message</label><div class="inquiry-field"><textarea id="contact-message" name="message" minlength="10" maxlength="1000" rows="4" required aria-describedby="contact-message-error"></textarea><span class="field-error" id="contact-message-error" hidden></span></div>
-  </div>
-  
-  <p class="form-success" data-form-success role="status" aria-live="polite"></p>
-  
-</form>
+    <p class="cta-lead">The form checks your details in the browser. This demo does not send or save them.</p>
+        <div class="inquiry-form-mount" data-inquiry-form-mount data-form-id="contact-inquiry" data-form-type="contact" data-default-nation="Fontaine"></div><noscript><p class="form-note">Turn on JavaScript to use this demo form.</p></noscript>
     <div class="cta-actions">
-      <button class="btn-gold" type="submit" form="contact-inquiry">Validate inquiry</button>
+      <button class="btn-gold" type="button" data-submit-form="contact-inquiry">Check inquiry details</button>
       <a class="btn-ghost" href="../index.html#nations">Browse the seven nations</a>
     </div>
-    <ol class="cta-steps">
-      <li><b>Enter your inquiry details</b>Nation, dates, and party size are all we need to begin.</li>
-      <li><b>Plan your route by email</b>Email the Director directly for a real itinerary.</li>
-      <li><b>Confirm directly with the Director</b>This website does not reserve or confirm tours.</li>
-    </ol>
     <p class="cta-note">Online booking and payment aren’t available on this website yet. Prefer to read first? See the <a href="../index.html#faq">FAQ</a>.</p>
   </section>
 
@@ -137,8 +119,8 @@
     <div><h4>Explore</h4><ul><li><a href="mondstadt.html">Mondstadt</a></li><li><a href="liyue.html">Liyue</a></li><li><a href="inazuma.html">Inazuma</a></li><li><a href="sumeru.html">Sumeru</a></li><li><a href="fontaine.html">Fontaine</a></li><li><a href="natlan.html">Natlan</a></li><li><a href="snezhnaya.html">Snezhnaya</a></li></ul></div>
     <div>
       <h4>Start planning</h4>
-      <p>Tell us your dates and party setup. We’ll take care of the route.</p>
-      <a class="foot-mail" href="mailto:hello@sevenwindstravel.example">hello@sevenwindstravel.example</a><br>
+      <p>Use the inquiry form to check your trip details. This demo does not send or save requests.</p>
+      <a class="foot-mail" href="#contact">Go to the inquiry form</a><br>
       <a class="btn-outline" href="#contact">Booking inquiry</a>
       <div class="foot-links"><a href="../index.html#about">Company Profile</a><a href="../index.html#faq">FAQ</a></div>
     </div>
@@ -147,25 +129,12 @@
 </footer>
 
 <div class="booking-modal" data-booking-modal data-nation="Fontaine" hidden>
-  <section class="booking-panel" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+  <section class="booking-panel" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="booking-title">
     <button class="modal-close" type="button" data-close-booking aria-label="Close booking inquiry">×</button>
-    <p class="cta-kicker">Fontaine · 5 days / 4 nights</p>
+    <p class="cta-kicker" data-package-summary>Fontaine · 5 days / 4 nights</p>
     <h2 id="booking-title">Estimated booking inquiry</h2>
-    <p class="modal-intro">Fill out this form to estimate the selected package. The static demo logs valid details in your browser only; nothing is sent, saved, or reserved.</p>
-    <form class="inquiry-form" id="booking-inquiry" data-inquiry-form data-booking-form data-price-per-person="20000" novalidate>
-  <div class="inquiry-grid">
-    <label for="booking-name">Full name</label><div class="inquiry-field"><input id="booking-name" name="full_name" type="text" minlength="2" maxlength="80" autocomplete="name" required aria-describedby="booking-name-error"><span class="field-error" id="booking-name-error" hidden></span></div>
-    <label for="booking-email">Email</label><div class="inquiry-field"><input id="booking-email" name="email" type="email" maxlength="254" autocomplete="email" required aria-describedby="booking-email-error"><span class="field-error" id="booking-email-error" hidden></span></div>
-    <label for="booking-phone">Phone number</label><div class="inquiry-field"><input id="booking-phone" name="phone" type="tel" maxlength="30" autocomplete="tel" required aria-describedby="booking-phone-error"><span class="field-error" id="booking-phone-error" hidden></span></div>
-    <label for="booking-nation">Nation</label><div class="inquiry-field"><select id="booking-nation" name="nation" required aria-describedby="booking-nation-error"><option value="">Choose a nation</option><option value="Mondstadt">Mondstadt</option><option value="Liyue">Liyue</option><option value="Inazuma">Inazuma</option><option value="Sumeru">Sumeru</option><option value="Fontaine" selected>Fontaine</option><option value="Natlan">Natlan</option><option value="Snezhnaya">Snezhnaya</option></select><span class="field-error" id="booking-nation-error" hidden></span></div>
-    <label for="booking-date">Preferred travel date</label><div class="inquiry-field"><input id="booking-date" name="travel_date" type="date" required aria-describedby="booking-date-error"><span class="field-error" id="booking-date-error" hidden></span></div>
-    <label for="booking-travelers">Number of travelers</label><div class="inquiry-field"><input id="booking-travelers" name="num_travelers" type="number" min="1" max="20" step="1" value="1" required aria-describedby="booking-travelers-error"><span class="field-error" id="booking-travelers-error" hidden></span></div>
-    <label for="booking-message">Message</label><div class="inquiry-field"><textarea id="booking-message" name="message" minlength="10" maxlength="1000" rows="4" required aria-describedby="booking-message-error"></textarea><span class="field-error" id="booking-message-error" hidden></span></div>
-  </div>
-  <p class="estimate-line">Estimated total: <strong data-estimated-total></strong> <span>per-person package estimate; not a confirmed reservation.</span></p>
-  <p class="form-success" data-form-success role="status" aria-live="polite"></p>
-  <button class="btn-gold inquiry-submit" type="submit">Validate booking inquiry</button>
-</form>
+    <p class="modal-intro">This demo estimates the package only. It does not send, save, or reserve a trip.</p>
+    <div class="inquiry-form-mount" data-inquiry-form-mount data-form-id="booking-inquiry" data-form-type="booking" data-default-nation="Fontaine"></div><noscript><p class="form-note">Turn on JavaScript to use this demo form.</p></noscript>
   </section>
 </div>
 <script src="../js/data.js" defer></script>

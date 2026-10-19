@@ -57,8 +57,10 @@
 .nations{padding:3rem 0 3.5rem;background:linear-gradient(#cfd4de,#c4ccd6 40%,#c3ccd6);color:#4e5f86}
 .nations .star-title{justify-content:center;font-size:1.9rem;text-transform:uppercase;color:#4c5f88}
 .nations .sub{text-align:center;margin:.3rem 0 2.4rem;font-size:1.35rem;color:#586a94}
-.nation-grid{display:flex;gap:1.8rem;padding:.8rem 4rem 1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 4rem;scrollbar-width:none}
-.nation-grid::-webkit-scrollbar{display:none}
+.nation-grid{display:flex;gap:1.8rem;padding:.8rem 4rem 1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 4rem;scrollbar-width:thin;scrollbar-color:#4c5f88 rgba(32,32,80,.14)}
+.nation-grid::-webkit-scrollbar{height:.75rem}
+.nation-grid::-webkit-scrollbar-track{border-radius:1rem;background:rgba(32,32,80,.14)}
+.nation-grid::-webkit-scrollbar-thumb{border:2px solid rgba(32,32,80,.14);border-radius:1rem;background:#4c5f88}
 .nation{flex:0 0 22rem;scroll-snap-align:start;position:relative;display:flex;flex-direction:column;border:.25rem solid var(--edge);border-radius:.35rem;overflow:hidden;background:var(--c);box-shadow:0 .3rem .7rem rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.4);transition:transform .2s}
 .nation:hover{transform:translateY(-.25rem)}
 .nation .photo{width:100%;height:12rem;object-fit:cover}
