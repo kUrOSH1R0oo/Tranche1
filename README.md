@@ -25,5 +25,5 @@ DM Serif Display, Alegreya, Newsreader. To work fully offline, download them and
 
 ## Notes
 - Sizing scales with the viewport (`html { font-size: 100vw / 90 }`), matching the
-  1920px prototype at any desktop width; below 800px it switches to a stacked layout.
+  1440px design at any desktop width; below 800px it switches to a stacked layout.
 - The FAQ uses native `<details>`.

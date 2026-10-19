@@ -105,7 +105,7 @@
 /* ---------- home additions ---------- */
 .about-more{position:relative;display:inline-block;margin:0 0 0 4rem;padding:.7rem 1.6rem;border:1px solid #4b5b83;border-radius:2rem;color:#4b5b83;font-size:1.05rem;font-weight:600;transition:background .2s,color .2s}
 .about-more:hover{background:#4b5b83;color:#fff}
-.about-copy .about-more,.about-copy .about-more,.director-copy .about-more{margin:.4rem 0 0}
+.about-copy .about-more,.director-copy .about-more{margin:.4rem 0 0}
 .hero h1 small{display:block;margin-top:.4rem;font-size:3.1vw;letter-spacing:.42em;padding-left:.42em;color:#fdf1b8;font-weight:400}
 
 /* ---------- mobile ---------- */

@@ -1,4 +1,4 @@
-/* Shared by Mondstadt, Liyue, Sumeru — each theme sets the --st-* variables */
+/* Shared by all seven nation pages — each theme sets the --st-* variables */
 body.stops{background:var(--st-page);font-family:var(--st-body)}
 
 /* hero */
@@ -7,12 +7,15 @@ body.stops{background:var(--st-page);font-family:var(--st-body)}
 .st-eyebrow{font-family:var(--st-body);font-size:1.4rem;color:var(--st-eyebrow-hero)}
 .st-hero h1{font-family:var(--st-display);font-weight:var(--st-h1-weight,400);font-size:6.6rem;line-height:1.05;letter-spacing:var(--st-h1-track,.02em);text-transform:uppercase;color:var(--st-h1)}
 .st-tag{font-family:var(--st-display);font-style:italic;font-weight:var(--st-tag-weight,700);font-size:1.75rem;line-height:1.3;color:#fff;margin:.4rem 0 1rem}
-.st-desc{font-family:var(--st-body);font-size:.98rem;line-height:1.55;color:rgba(255,255,255,.85);max-width:27rem;margin-bottom:1.6rem}
-.st-btn{display:inline-block;padding:.75rem 1.5rem;font-family:var(--st-body);font-size:.95rem;background:var(--st-btn-bg);color:var(--st-btn-fg);border:1px solid var(--st-btn-border,transparent)}
-.st-btn:hover{filter:brightness(1.08)}
+.st-desc{font-family:var(--st-body);font-size:1.4rem;line-height:1.5;color:rgba(255,255,255,.95);text-shadow:0 1px 6px rgba(0,0,0,.45);max-width:34rem;margin-bottom:2rem}
+/* hero call-to-action button */
+.st-btn{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.2rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--st-btn-bg);color:var(--st-btn-fg);border:.12rem solid var(--st-btn-border,transparent);border-radius:3rem;box-shadow:0 .4rem 1.2rem rgba(0,0,0,.35);transition:transform .2s,filter .2s}
+.st-btn::after{content:"→";transition:transform .2s}
+.st-btn:hover{filter:brightness(1.1);transform:translateY(-.15rem)}
+.st-btn:hover::after{transform:translateX(.3rem)}
 
 /* quick facts bar */
-.st-stats{display:flex;gap:3.2rem;padding:1.6rem 2.5rem;font-family:var(--st-body);font-size:1.1rem;background:var(--st-stats-bg);color:var(--st-stats-fg);border-top:1px solid var(--st-stats-edge,transparent)}
+.st-stats{display:flex;justify-content:space-around;gap:2rem;padding:1.8rem 2.5rem;font-family:var(--st-body);font-size:1.3rem;background:var(--st-stats-bg);color:var(--st-stats-fg);border-top:1px solid var(--st-stats-edge,transparent)}
 
 /* intro */
 .st-intro{display:grid;grid-template-columns:1.4fr 1fr;gap:4rem;align-items:center;padding:5.6rem 8.8rem;background:var(--st-intro-bg)}
@@ -34,7 +37,7 @@ body.stops{background:var(--st-page);font-family:var(--st-body)}
 .stop a{font-family:var(--st-body);font-size:.9rem;color:var(--st-link);border-bottom:1px solid var(--st-link);padding-bottom:.15rem}
 
 @media (max-width:800px){
-  .st-hero{padding:2.5rem 1.4rem}.st-hero h1{font-size:3.2rem}.st-tag{font-size:1.3rem}
+  .st-hero{padding:2.5rem 1.4rem}.st-hero h1{font-size:3.2rem}.st-tag{font-size:1.3rem}.st-desc{font-size:1.15rem}
   .st-stats{flex-direction:column;gap:.6rem;padding:1.2rem 1.4rem;font-size:.95rem}
   .st-intro{grid-template-columns:1fr;gap:1.4rem;padding:2.6rem 1.4rem}.st-intro h2{font-size:2rem}
   .st-stops{padding:2rem .8rem}.stop{min-height:26rem;padding:0 1.4rem}.stop h3{font-size:1.9rem}
